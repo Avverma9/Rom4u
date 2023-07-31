@@ -9,7 +9,7 @@ const Tool = () => {
   useEffect(() => {
     const fetchData = async () => {
    
-        const response = await axios.get('https://youtube-pn9u.onrender.com/tool');
+        const response = await axios.get('https://youtube-bbrv.onrender.com/tool');
         setData(response.data);
      
     };

@@ -9,7 +9,7 @@ const Tools = () => {
 
     const handleSubmit = ((e) => {
         e.preventDefault();
-            const response = axios.post("https://youtube-pn9u.onrender.com/tool",{
+            const response = axios.post("https://youtube-bbrv.onrender.com/tool",{
                 name,
                 link
             });

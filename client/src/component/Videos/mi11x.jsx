@@ -10,7 +10,7 @@ const VideoMI11x = () => {
   // useEffect(() => {
   //   const fetchVideoData = async () => {
   //     try {
-  //       const response = await axios.get('http://localhost:5000/getVideo');
+  //       const response = await axios.get('https://youtube-bbrv.onrender.com/getVideo');
   //       setData(response.data); // when mapping always target the data
   //     } catch (error) {
   //       console.error('Error fetching video data:', error);
@@ -20,7 +20,7 @@ const VideoMI11x = () => {
   //   fetchVideoData();
   // }, []);
 useEffect(()=>{
-  fetch("https://youtube-pn9u.onrender.com/getmi11x/get")
+  fetch("https://youtube-bbrv.onrender.com/getmi11x/get")
   .then(response=>response.json())
   .then(data=>setData(data))
   .catch(error=>console.error(error))

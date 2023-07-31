@@ -13,7 +13,7 @@ const VideoPage = () => {
   // useEffect(() => {
   //   const fetchVideoData = async () => {
   //     try {
-  //       const response = await axios.get('https://youtube-pn9u.onrender.com/getVideo');
+  //       const response = await axios.get('https://youtube-bbrv.onrender.com/getVideo');
   //       setData(response.data); // when mapping always target the data
   //     } catch (error) {
   //       console.error('Error fetching video data:', error);
@@ -23,7 +23,7 @@ const VideoPage = () => {
   //   fetchVideoData();
   // }, []);
 useEffect(()=>{
-  fetch("https://youtube-pn9u.onrender.com/getVideo")
+  fetch("https://youtube-bbrv.onrender.com/getVideo")
   .then(response=>response.json())
   .then(data=>setData(data))
   .catch(error=>console.error(error))

@@ -27,7 +27,7 @@ const Mi11Tpro = () => {
       formData.append('videoUrl', videoUrl);
       // const response = await axios.post('https://youtube-pn9u.onrender.com/video', formData);//recent video
     //   const response = await axios.post('https://youtube-pn9u.onrender.com/mi11x/create', formData); // mi11x post
-      const response = await axios.post('https://youtube-pn9u.onrender.com/mi11t/create', formData);
+      const response = await axios.post('https://youtube-bbrv.onrender.com', formData);
       if (response.status === 200) {
         console.log('Data successfully sent to the backend!');
         alert("data has sent")

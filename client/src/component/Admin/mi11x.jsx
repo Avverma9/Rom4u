@@ -26,7 +26,7 @@ const Mi11X = () => {
       formData.append('description', description);
       formData.append('videoUrl', videoUrl);
       // const response = await axios.post('https://youtube-pn9u.onrender.com/video', formData);//recent video
-      const response = await axios.post('https://youtube-pn9u.onrender.com/mi11x/create', formData); // mi11x post
+      const response = await axios.post('https://youtube-bbrv.onrender.com', formData); // mi11x post
       
       // const response = await axios.post('https://youtube-pn9u.onrender.com/mi11t/create', formData);
       if (response.status === 200) {
