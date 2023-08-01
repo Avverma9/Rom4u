@@ -1,29 +1,31 @@
-import React,{useState} from 'react'
-import axios from 'axios'
-const Requests=()=>{
-    const [name,setName]=useState("")
-    const [requests,setRequests]=useState("")
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-    const handleSubmit=async (e)=>{
-        e.preventDefault()
-        
-        const response=await axios.post("https://youtube-bbrv.onrender.com/create/req",{
-            name,
-            requests
-        })
-        if (response.data){
-            alert("data has been sent")
-        }
-    }
-    return (
-        <div className='container-home'>
-            <form onSubmit={handleSubmit}>
-                <input type="text" value={name} placeholder='Enter Your name' onChange={(e)=>setName(e.target.value)} />
-                <input type="text" value={requests} placeholder='Now you can request here ! ...' onChange={(e)=> setRequests(e.target.value)} />
-            <br />
-            <div><button type='submit'>Submit</button></div>
-            </form>
+const Requests = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://youtube-bbrv.onrender.com/get/req");
+        setData(response.data);
+        alert("Data received");
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <div className="request-container">
+      {data.map((e) => (
+        <div key={e._id}>
+          <p>name: {e.name}</p>
         </div>
-    )
-}
-export default Requests
+      ))}
+    </div>
+  );
+};
+
+export default Requests;

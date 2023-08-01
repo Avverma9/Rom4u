@@ -56,7 +56,7 @@ function NavScrollExample() {
             <Nav.Link href="#" disabled>
               <FaHandHoldingHeart className="link-logo" /> Support us
             </Nav.Link>
-            <Nav.Link href="#" disabled>
+            <Nav.Link href="/requests" >
               <FaPrayingHands className="link-logo" /> Request
             </Nav.Link>
             <NavDropdown.Divider />

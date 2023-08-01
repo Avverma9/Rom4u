@@ -8,6 +8,7 @@ import VideoMI11T from "./component/Videos/mi11t";
 import VideoMI11x from "./component/Videos/mi11x";
 import Tool from "./component/Videos/tools";
 import Sidebar from "./component/Admin/Sidebar";
+import Requests from "./component/Videos/Requests";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
       {/* <Mi11Tpro/> */}
       {/* <Mi11X/> */}
       {/* <Tools/> */}
+     
       <Routes>
+        <Route path="/requests" element={<Requests/>}/>
         <Route path="/videos" element={<VideoPage />} />
         <Route path="/mi11Tpro" element={<VideoMI11T />} />
         <Route path="/mi11x" element={<VideoMI11x />} />
