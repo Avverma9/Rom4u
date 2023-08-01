@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+
 import axios from 'axios';
 
-import './Admin.css';
+import './mi11tpro.css';
 
 const Mi11Tpro = () => {
-  const location = useLocation();
+
   const [title, setTitle] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [device , setDevice] = useState("")
@@ -25,8 +25,7 @@ const Mi11Tpro = () => {
       formData.append('date', date);
       formData.append('description', description);
       formData.append('videoUrl', videoUrl);
-      // const response = await axios.post('https://youtube-pn9u.onrender.com/video', formData);//recent video
-    //   const response = await axios.post('https://youtube-pn9u.onrender.com/mi11x/create', formData); // mi11x post
+    
       const response = await axios.post('https://youtube-bbrv.onrender.com', formData);
       if (response.status === 200) {
         console.log('Data successfully sent to the backend!');
@@ -44,9 +43,7 @@ const Mi11Tpro = () => {
     setImageFile(file);
   };
 
-  if (location.pathname !== '/av') {
-    return null;
-  }
+ 
 
   return (
     <div className='container-home'>
