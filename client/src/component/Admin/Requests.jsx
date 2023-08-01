@@ -6,17 +6,18 @@ const Requests = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
         const response = await axios.get("https://youtube-bbrv.onrender.com/get/req");
         setData(response.data);
-        alert("Data received");
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
+    
     };
     fetchData();
   }, []);
-
+// useEffect(()=>{
+//     fetch("http://localhost:5000/get/req")
+//     .then(response=>response.json())
+//     .then(data=>setData(data))
+//     .catch(error=>console.error(error))
+// })
   return (
     <div className="request-container">
       {data.map((e) => (
