@@ -1,12 +1,12 @@
-const request= require("../models/requestModel")
+const requestsModel= require("../models/requestModel")
 
 const createReq= async(req,res)=>{
-    const{req,name}=req.body
-    const created=await request.create({req,name})
+    const{requests,name}=req.body
+    const created=await requestModel.create({requests,name})
     res.status(201).json(created)
 }
 const getReq= async function(req,res){
-    const getData= await request.find()
+    const getData= await requestsModel.find()
     res.json(getData)
 }
 
