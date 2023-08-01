@@ -4,6 +4,7 @@ import Mi11Tpro from './mi11tpro.jsx';
 import Mi11x from './mi11x.jsx';
 import Tools from './tools.jsx';
 import Recent from "./Recent.jsx";
+import Requests from './Requests.jsx';
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -26,7 +27,7 @@ const Sidebar = () => {
         </ul>
       </div>
 
-      {selectedOption === 'Requests' && <div>Content for Requests option</div>}
+      {selectedOption === 'Requests' ? (<Requests/>):null}
       {selectedOption === 'Tools' ? (<Tools/>) : null}
       {selectedOption === 'Recent Videos' ? (<Recent/>) : null}
       {selectedOption === 'Mi11x' ? (<Mi11x/>) : null}
