@@ -2,7 +2,7 @@ const requestsModel= require("../models/requestModel")
 
 const createReq= async(req,res)=>{
     const{requests,name}=req.body
-    const created=await requestModel.create({requests,name})
+    const created=await requestsModel.create({requests,name})
     res.status(201).json(created)
 }
 const getReq= async function(req,res){
