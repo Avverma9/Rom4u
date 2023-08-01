@@ -14,7 +14,7 @@ const Tools = () => {
                 link
             });
             if (response.ok) {
-                alert("Data has been sent");
+                window.alert("Data has been sent");
             } 
     })
 if(location.pathname !== "/av"){
