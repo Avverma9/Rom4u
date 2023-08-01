@@ -6,6 +6,7 @@ const mi11tpro=require("../controller/mi11tpro")
 const mi11x=require("../controller/mi11x")
 const tools=require("../controller/tools")
 const {upload}=require("../aws/upload")
+const request=require("../controller/reqController")
 //==============================mi 11t==============================================//
 router.post("/mi11t/create",upload,mi11tpro.createmi11t)
 router.get("/getmi11t/get",mi11tpro.getMi11T)
@@ -22,4 +23,7 @@ router.post("/user",upload,userController.createSignup)
 router.get("/signin",userController.signIn)
 router.get("/getAlluser",userController.getAllUsers)
 router.get("/getVideo",youtubeController.getVideo)
+//======================requests======================
+router.post("/create/req",request.createReq)
+router.post("/get/req",request.getReq)
 module.exports = router;
