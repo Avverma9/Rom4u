@@ -1,8 +1,8 @@
 const tools=require("../models/toolsModel")
 
 const newTool = async(req,res)=>{
-    const {name,videoUrl}=req.body
-    const instancee={name,videoUrl}
+    const {name,link}=req.body
+    const instancee={name,link}
     const newcreate= await tools.create(instancee)
     res.json(newcreate)
 }
