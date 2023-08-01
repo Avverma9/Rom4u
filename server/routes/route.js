@@ -25,5 +25,5 @@ router.get("/getAlluser",userController.getAllUsers)
 router.get("/getVideo",youtubeController.getVideo)
 //======================requests======================
 router.post("/create/req",requests.createReq)
-router.post("/req/get/data",requests.getReq)
+router.get("/get/req",requests.getReq)
 module.exports = router;
