@@ -51,8 +51,6 @@
   color: #007bff;
 }
 
-/* Assuming you are using React Icons (BsPlayCircle) */
-/* If you are not using any icon library, you may need to include your icon styles here */
 
 .watch-more a svg {
   margin-right: 5px;
@@ -120,45 +118,7 @@ text-decoration: none;
   display: flex;
   flex-wrap: wrap;
 }
-/* .download-videos{
-  display: flex;
-  position: relative;
-  gap: 100px;
-  width: 30%;
-  justify-content: center;
-  line-height: 3;
-  margin-bottom: 50px;
-  margin-top: 10px;
-} */
-/* .download-videos a{
-  background:transparent;
-color:rgb(255, 0, 183);
-border: 1px solid rgb(255, 0, 183);
-text-decoration: none;
-text-transform: uppercase;
-letter-spacing: 0.1em;
-font-weight: 701;
-font-family: cursive;
-width: 170px;
-height: 50px;
-transition: 0.5s;
-}
-.download-videos a:hover{
-  letter-spacing: 0.20em;
-  background: rgb(255, 0, 183);
-  color: white;
-  width: 190px;
-  box-shadow: 0 0 35px rgb(255, 0, 183) ;
-} */
 
-/* .download-icon{
-  font-size: 10px;
-}
-.download-videos p{
-  font-size: 12px;
-  
-  
-} */
 .home-nav,.videos-nav{
   display: flex;
 align-items: center;
@@ -201,6 +161,45 @@ margin-left: 8%;
   background: linear-gradient(to right, rgb(184, 184, 184), white);
   color: black;
 }
-/* Styles for screens smaller than or equal to 768px (e.g., mobile devices) */
 
 
+
+/* Media query for screens with a width of 468px or smaller */
+@media (max-width: 468px) {
+  .video-card {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Change column layout for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  
+  .video-cards:hover {
+    box-shadow: none; /* Remove box shadow on hover for smaller screens */
+  }
+  
+  .watch-more {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-top: 10px; /* Add top margin for better spacing */
+  }
+
+  /* Additional styles for better visibility on smaller screens (adjust as needed) */
+  .video-title {
+    font-size: 16px;
+  }
+
+  .video-image img {
+    border-radius: 4px;
+  }
+
+  .video-device,
+  .video-date {
+    font-size: 12px;
+  }
+
+  .watchvideo-videos {
+    font-size: 14px;
+  }
+
+  .playcircle,
+  .playcircle:hover {
+    font-size: 14px;
+  }
+}

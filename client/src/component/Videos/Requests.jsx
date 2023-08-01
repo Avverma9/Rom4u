@@ -17,6 +17,7 @@ const Requests=()=>{
     }
     return (
         <div className='container-home'>
+            <h1>Request to Rom4U</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={name} placeholder='Enter Your name' onChange={(e)=>setName(e.target.value)} />
                 <input type="text" value={requests} placeholder='Now you can request here ! ...' onChange={(e)=> setRequests(e.target.value)} />
