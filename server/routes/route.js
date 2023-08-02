@@ -7,6 +7,7 @@ const mi11x=require("../controller/mi11x")
 const tools=require("../controller/tools")
 const {upload}=require("../aws/upload")
 const requests=require("../controller/reqController")
+const rom=require("../controller/romController")
 //==============================mi 11t==============================================//
 router.post("/mi11t/create",upload,mi11tpro.createmi11t)
 router.get("/getmi11t/get",mi11tpro.getMi11T)
@@ -26,4 +27,7 @@ router.get("/getVideo",youtubeController.getVideo)
 //======================requests======================
 router.post("/create/req",requests.createReq)
 router.get("/get/req",requests.getReq)
+//==========================rom=====================
+router.post("/create/rom",rom.createROm)
+router.get("/get/rom",rom.getROm)
 module.exports = router;
