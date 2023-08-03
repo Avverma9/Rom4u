@@ -9,6 +9,7 @@ import VideoMI11x from "./component/Videos/mi11x";
 import Tool from "./component/Videos/tools";
 import Sidebar from "./component/Admin/Sidebar";
 import Requests from "./component/Videos/Requests";
+import Rom from "./component/Videos/rom";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/mi11x" element={<VideoMI11x />} />
         <Route path="/tools" element={<Tool />} />
         <Route path="/" element={<LandingPage />} />
+        <Route path="/roms" element={<Rom/>}/>
       </Routes>
       <Footer />
     </Router>

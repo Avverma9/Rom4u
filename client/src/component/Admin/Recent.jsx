@@ -23,7 +23,7 @@ const handleSubmit = async (e)=>{
 
     const response =await axios.post("https://youtube-bbrv.onrender.com/video",formData)
     if(response.data){
-        alert("data has been sent")
+        window.location.reload()
     } else{
         console.log("it seems an error");
     }

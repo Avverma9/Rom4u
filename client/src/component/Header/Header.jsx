@@ -47,7 +47,7 @@ function NavScrollExample() {
                 <FiTool /> Tools
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
+            <Nav.Link href="/roms">
               <BiLinkAlt className="link-logo" /> Rom Link
             </Nav.Link>
             <Nav.Link href="#" disabled>

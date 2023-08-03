@@ -29,7 +29,7 @@ const Mi11Tpro = () => {
       const response = await axios.post('https://youtube-bbrv.onrender.com', formData);
       if (response.status === 200) {
         console.log('Data successfully sent to the backend!');
-        alert("data has sent")
+        window.location.reload()
       } else {
         console.error('Failed to send data to the backend.');
       }
