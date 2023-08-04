@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <NavScrollExample />
-      <Sidebar/>
+      
       {/* <Mi11Tpro/> */}
       {/* <Mi11X/> */}
       {/* <Tools/> */}
@@ -28,6 +28,7 @@ function App() {
         <Route path="/tools" element={<Tool />} />
         <Route path="/" element={<LandingPage />} />
         <Route path="/roms" element={<Rom/>}/>
+        <Route path="/av" element={<Sidebar/>}/>
       </Routes>
       <Footer />
     </Router>
