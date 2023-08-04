@@ -18,7 +18,15 @@ function NavScrollExample() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="/">ROM4U</Navbar.Brand>
+         <Navbar.Brand href="/">
+          <img
+            src={"https://avvermabucket.s3.ap-south-1.amazonaws.com/1691152186859-logo512-removebg-preview.png"}
+             alt="Logo"
+            height="30"
+            className="d-inline-block align-top"
+          />
+          ROM4U
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
