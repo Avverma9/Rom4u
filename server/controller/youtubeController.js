@@ -12,4 +12,10 @@ const getVideo = async(req,res)=>{
     const videoData= await YoutubeModel.find()
     res.json(videoData)
 }
-module.exports={createVideo,getVideo}
+
+const deleteVideo = async function(req,res){
+    const {id}= req.params
+    const deletedData= await YoutubeModel.findByIdAndDelete(id)
+    res.status(200).json(deletedData)
+}
+module.exports={createVideo,getVideo,deleteVideo}

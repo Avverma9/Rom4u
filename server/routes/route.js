@@ -19,6 +19,7 @@ router.post("/tool/post",tools.newTool)
 router.get("/tool",tools.getTool)
 //=================================================================================//
 router.post("/video",upload,youtubeController.createVideo)
+router.delete("/video/delete/:id",youtubeController.deleteVideo)
 
 router.post("/user",upload,userController.createSignup)
 router.get("/signin",userController.signIn)
