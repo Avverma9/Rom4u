@@ -6,25 +6,22 @@ import {BsPlayCircle} from "react-icons/bs";
 
 const VideoMI11x = () => {
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchVideoData = async () => {
-  //     try {
-  //       const response = await axios.get('https://youtube-bbrv.onrender.com/getVideo');
-  //       setData(response.data); // when mapping always target the data
-  //     } catch (error) {
-  //       console.error('Error fetching video data:', error);
-  //     }
-  //   };
-
-  //   fetchVideoData();
-  // }, []);
 useEffect(()=>{
   fetch("https://youtube-bbrv.onrender.com/getmi11x/get")
   .then(response=>response.json())
-  .then(data=>setData(data))
+  .then(data=>{
+    setData(data)
+    setIsLoading(false)
+})
   .catch(error=>console.error(error))
+  
 },[])
+if (isLoading) {
+  return <div className='loading-screen'><img src="https://media3.giphy.com/media/fUSQGDRvuBlQXcX0TA/giphy.gif" alt="Loading" />;
+  <p>Server Connect Hone tak Chay Pee lo friend</p></div>
+}
   return (
     <>
     <div className="video-card"> {/* Added the video-card class here */}

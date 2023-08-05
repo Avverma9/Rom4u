@@ -5,17 +5,22 @@ import {AiOutlineCloudDownload} from 'react-icons/ai';
 
 const Tool = () => {
   const [data, setData] = useState([]);
+  const [isLoading,setIsLoading]=useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
    
         const response = await axios.get('https://youtube-bbrv.onrender.com/tool');
         setData(response.data);
+        setIsLoading(false)
      
     };
     fetchData();
   }, []);
-
+  if (isLoading) {
+    return <div className='loading-screen'><img src="https://media3.giphy.com/media/fUSQGDRvuBlQXcX0TA/giphy.gif" alt="Loading" />;
+    <p>Server Connect hone wala hai friend . . . . . .</p></div>
+  }
   return (
     <>
     <div className='all-item'>

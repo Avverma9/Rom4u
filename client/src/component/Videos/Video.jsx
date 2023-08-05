@@ -8,12 +8,14 @@ import { BsCalendar2Date } from 'react-icons/bs';
 
 const VideoPage = () => {
   const [data, setData] = useState([]);
+  const [isLoading,setIsLoading]=useState(true)
 
   useEffect(() => {
     const fetchVideoData = async () => {
       try {
         const response = await axios.get('https://youtube-bbrv.onrender.com/getVideo');
         setData(response.data);
+        setIsLoading(false)
       } catch (error) {
         console.error('Error fetching video data:', error);
       }
@@ -22,16 +24,11 @@ const VideoPage = () => {
     fetchVideoData();
   }, []);
 
-  // const handleDelete = async (id) => {
-  //   try {
-  //     const response = await axios.delete(`http://localhost:5000/video/delete/${id}`);
-  //     if (response.status === 200) {
-  //       window.location.reload("/videos")
-  //     }
-  //   } catch (error) {
-  //     console.error('Error deleting video data:', error);
-  //   }
-  // };
+  if (isLoading) {
+    return <div className='loading-screen'><img src="https://media3.giphy.com/media/fUSQGDRvuBlQXcX0TA/giphy.gif" alt="Loading" />;
+    <p>Raste me hu pahuchne wala hu friend . . . . . .</p></div>
+  }
+
 
   return (
     <div className="video-card">

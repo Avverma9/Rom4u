@@ -158,7 +158,17 @@
   display: flex;
   margin-left: 8%;
 }
-
+/* loading screen */
+.loading-screen {
+  margin: auto;
+  margin-left: 450px;
+  padding: 8px;
+}
+.loading-screen p{
+  margin-left: 25px;
+  font-size: 25px;
+}
+/*  */
 .text-center {
   background: linear-gradient(to right, #b8b8b8, #fff);
   color: black;

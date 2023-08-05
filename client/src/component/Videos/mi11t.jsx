@@ -1,61 +1,62 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './Video.css';
-import {BsPlayCircle} from 'react-icons/bs';
+import { BsPlayCircle } from 'react-icons/bs';
 
 const VideoMI11T = () => {
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Add a state to track loading
 
-  // useEffect(() => {
-  //   const fetchVideoData = async () => {
-  //     try {
-  //       const response = await axios.get('https://youtube-bbrv.onrender.com/getVideo');
-  //       setData(response.data); // when mapping always target the data
-  //     } catch (error) {
-  //       console.error('Error fetching video data:', error);
-  //     }
-  //   };
+  useEffect(() => {
+    fetch("https://youtube-bbrv.onrender.com/getmi11t/get")
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
+        setIsLoading(false); // Set loading state to false when data is fetched
+      })
+      .catch(error => {
+        console.error(error);
+        setIsLoading(false); // Set loading state to false if there's an error
+      });
+  }, []);
 
-  //   fetchVideoData();
-  // }, []);
-useEffect(()=>{
-  fetch("https://youtube-bbrv.onrender.com/getmi11t/get")
-  .then(response=>response.json())
-  .then(data=>setData(data))
-  .catch(error=>console.error(error))
-},[])
+  // Check if data is still loading, show a loading image
+  if (isLoading) {
+    return <div className='loading-screen'><img src="https://media3.giphy.com/media/fUSQGDRvuBlQXcX0TA/giphy.gif" alt="Loading" />;
+    <p>Server Connect Hone tak Chay Pee lo friend</p></div>
+  }
+
   return (
     <>
-    <div className="video-card"> {/* Added the video-card class here */}
-      {data.map((video) => (
-        <div key={video._id}>
-          {video.images.map((image) => (
-            <div className="video-image">
-              <img key={image} src={image} alt="" />
+      <div className="video-card"> {/* Added the video-card class here */}
+        {data.map((video) => (
+          <div key={video._id}>
+            {video.images.map((image) => (
+              <div className="video-image">
+                <img key={image} src={image} alt="" />
+              </div>
+            ))}
+            <div className="video-title">
+              <p>{video.title}</p>
             </div>
-          ))}
-          <div className="video-title">
-            <p>{video.title}</p>
-          </div>
-          <div className='video-device'><p>Device: {video.device}</p></div>
-          <div className="video-date">
-            <p>{video.date}</p>
-          </div>
-          <div className="video-description">
-            <p>{video.description}</p>
-          </div>
+            <div className='video-device'><p>Device: {video.device}</p></div>
+            <div className="video-date">
+              <p>{video.date}</p>
+            </div>
+            <div className="video-description">
+              <p>{video.description}</p>
+            </div>
 
-          <div className="explore-button">
-            <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
-            <BsPlayCircle/>
-              Watch Video
-            </a>
+            <div className="explore-button">
+              <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
+                <BsPlayCircle />
+                Watch Video
+              </a>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-    <div className='watch-more'> <a href="https://www.youtube.com/rom4u9"> <BsPlayCircle/> Watch more</a></div></>
+        ))}
+      </div>
+      <div className='watch-more'> <a href="https://www.youtube.com/rom4u9"> <BsPlayCircle /> Watch more</a></div>
+    </>
   );
 };
 
