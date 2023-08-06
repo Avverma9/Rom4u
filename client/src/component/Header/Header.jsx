@@ -13,11 +13,12 @@ import { BiLinkAlt, BiSearch } from "react-icons/bi";
 import { FaRegBell,FaUsers } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { FaPrayingHands } from "react-icons/fa";
+import {AiOutlineEye} from "react-icons/ai"
 import "../Videos/Video.css";
 
 function NavScrollExample() {
   const [activeUsers, setActiveUsers] = useState(0);
-
+  const [eyeColor, setEyeColor] = useState('red');
   useEffect(() => {
  
     const ws = new WebSocket("wss://websocket-8jxu.onrender.com");
@@ -32,6 +33,26 @@ function NavScrollExample() {
       ws.close();
     };
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Generate a random color
+      const randomColor = getRandomColor();
+      setEyeColor(randomColor);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
   return (
      <Navbar
       expand="lg"
@@ -88,9 +109,9 @@ function NavScrollExample() {
               <FaPrayingHands className="link-logo" /> Request
             </Nav.Link>
             <NavDropdown.Divider />
-            <Nav.Link >
-              <FaUsers className="active-users-icon" /> {activeUsers}
-            </Nav.Link>
+            <Nav.Link>
+      <AiOutlineEye className="active-users-icon" style={{ color: eyeColor }} /> {activeUsers}
+    </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
