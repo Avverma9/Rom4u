@@ -24,7 +24,22 @@
     font-size: 20px; /* Set the font size for the active users icon */
     margin-right: 5px; /* Add some space between the icon and the active users count */
   }
+  .active-users-link {
+    position: relative;
+  }
   
+  .hover-message {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
   /* Custom styles for the dropdown menu */
   .drop-menu {
     display: flex;

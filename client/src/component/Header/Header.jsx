@@ -18,6 +18,7 @@ import "./Header.css"
 function NavScrollExample() {
   const [activeUsers, setActiveUsers] = useState(0);
   const [eyeColor, setEyeColor] = useState('red');
+  const [showMessage, setShowMessage] = useState(false);
   useEffect(() => {
  
     const ws = new WebSocket("wss://websocket-8jxu.onrender.com");
@@ -51,7 +52,13 @@ function NavScrollExample() {
     }
     return color;
   };
+  const handleHover = () => {
+    setShowMessage(true);
+  };
 
+  const handleHoverOut = () => {
+    setShowMessage(false);
+  };
   return (
      <Navbar
       expand="lg"
@@ -108,8 +115,13 @@ function NavScrollExample() {
               <FaPrayingHands className="link-logo" /> Request
             </Nav.Link>
             <NavDropdown.Divider />
-            <Nav.Link>
+            <Nav.Link
+      className="active-users-link"
+      onMouseEnter={handleHover}
+      onMouseLeave={handleHoverOut}
+    >
       <AiOutlineEye className="active-users-icon" style={{ color: eyeColor }} /> {activeUsers}
+      {showMessage && <div className="hover-message">Active users</div>}
     </Nav.Link>
           </Nav>
         </Navbar.Collapse>
