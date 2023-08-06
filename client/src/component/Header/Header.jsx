@@ -19,32 +19,19 @@ function NavScrollExample() {
   const [activeUsers, setActiveUsers] = useState(0);
 
   useEffect(() => {
-    console.log("WebSocket connecting...");
-    const ws = new WebSocket("ws://https://youtube-bbrv.onrender.com");
-  
-    ws.onopen = () => {
-      console.log("WebSocket connected!");
-    };
-  
+ 
+    const ws = new WebSocket("wss://websocket-8jxu.onrender.com");
+
+ 
     ws.onmessage = (event) => {
-      console.log("WebSocket message received:", event.data);
       const data = JSON.parse(event.data);
       setActiveUsers(data.activeUsers);
     };
-  
-    ws.onclose = () => {
-      console.log("WebSocket connection closed.");
-    };
-  
-    ws.onerror = (error) => {
-      console.error("WebSocket error:", error);
-    };
-  
+
     return () => {
       ws.close();
     };
   }, []);
-  
   return (
      <Navbar
       expand="lg"
