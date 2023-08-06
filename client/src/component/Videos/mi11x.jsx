@@ -20,7 +20,7 @@ useEffect(()=>{
 },[])
 if (isLoading) {
   return <div className='loading-screen'><img src="https://media3.giphy.com/media/fUSQGDRvuBlQXcX0TA/giphy.gif" alt="Loading" />;
-  <p>Server Connect Hone tak Chay Pee lo friend</p></div>
+  <p>Sasta server, need to wait while we are connecting .....</p></div>
 }
   return (
     <>

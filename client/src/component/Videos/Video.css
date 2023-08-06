@@ -29,6 +29,24 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
+/* Add this to your Video.css or create a new CSS file if needed */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Optional: Add a background color to the header if you want it to stand out */
+.header {
+  background-color: #fff; /* Replace with your desired background color */
+}
+
+/* Optional: Add padding to the top of the content to prevent it from being covered by the fixed header */
+.landing-page {
+  padding-top: 70px; /* Adjust the value according to your header height */
+}
 
 .watch-more {
   display: inline-block;

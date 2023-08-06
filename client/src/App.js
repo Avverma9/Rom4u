@@ -11,24 +11,36 @@ import Sidebar from "./component/Admin/Sidebar";
 import Requests from "./component/Videos/Requests";
 import Rom from "./component/Videos/rom";
 
+import Profile from "./component/Loginpage/Profile"; // Add the import statement for Profile
+import Login from "./component/Loginpage/Loginpage";
+
 function App() {
   return (
     <Router>
       <NavScrollExample />
-      
-      {/* <Mi11Tpro/> */}
-      {/* <Mi11X/> */}
-      {/* <Tools/> */}
-     
+  
       <Routes>
-        <Route path="/requests" element={<Requests/>}/>
+        <Route path="/requests" element={<Requests />} />
         <Route path="/videos" element={<VideoPage />} />
         <Route path="/mi11Tpro" element={<VideoMI11T />} />
         <Route path="/mi11x" element={<VideoMI11x />} />
         <Route path="/tools" element={<Tool />} />
         <Route path="/" element={<LandingPage />} />
-        <Route path="/roms" element={<Rom/>}/>
-        <Route path="/av" element={<Sidebar/>}/>
+        <Route path="/login" element={<Login/>} />
+        <Route
+          path="/profile"
+          element={
+            <Profile
+              userProfile={
+                localStorage.getItem("isSignedIn")
+                  ? JSON.parse(localStorage.getItem("loggedUser"))
+                  : null
+              }
+            />
+          }
+        />
+        <Route path="/roms" element={<Rom />} />
+        <Route path="/av" element={<Sidebar />} />
       </Routes>
       <Footer />
     </Router>

@@ -16,7 +16,10 @@ import "../Videos/Video.css";
 
 function NavScrollExample() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar
+    expand="lg"
+    className="bg-body-tertiary header fixed-top" // Add the 'fixed-top' class to make the header fixed
+  >
       <Container fluid>
          <Navbar.Brand href="/">
           <img
