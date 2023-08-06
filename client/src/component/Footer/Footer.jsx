@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter,  FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-
+import './Footer.css'
 const Footer = () => {
   return (
     <footer className="bg-light text-center text-white">

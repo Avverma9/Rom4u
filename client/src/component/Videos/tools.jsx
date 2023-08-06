@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './tools.css';
+import './Loading.css'
 import {AiOutlineCloudDownload} from 'react-icons/ai';
 
 const Tool = () => {

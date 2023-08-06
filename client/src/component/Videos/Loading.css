@@ -1,0 +1,23 @@
+/* LoadingScreen.css */
+
+/* Styles for the loading screen */
+.loading-screen {
+   
+  
+   
+    justify-content: center;
+  margin-left: 350px;
+  }
+  
+  .loading-screen img {
+    width: 800px;
+    
+  }
+  
+  .loading-screen p {
+    font-size: 16px;
+    margin-left: 250px;
+    color: #888;
+   
+  }
+  

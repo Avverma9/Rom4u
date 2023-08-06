@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './Video.css';
+import './mi11x.css';
+import './Loading.css'
 import {BsPlayCircle} from "react-icons/bs";
 
 const VideoMI11x = () => {
@@ -43,12 +43,18 @@ if (isLoading) {
             <p>{video.description}</p>
           </div>
 
-          <div className="explore-button">
+          {/* <div className="watchvideo-videos">
             <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
             <BsPlayCircle/> Watch Video
             </a>
-          </div>
-         
+          </div> */}
+           <div className="explore-button">
+            <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
+              <div className="watchvideo-videos">
+                <BsPlayCircle className="playcircle" />
+                Watch Video
+              </div> </a>
+         </div>
         </div>
         
       ))}

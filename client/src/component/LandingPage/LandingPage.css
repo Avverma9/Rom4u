@@ -8,6 +8,7 @@ body, h1, h2, p, button {
 
 /* Set up a basic layout */
 .landing-page {
+  
   font-family: Arial, sans-serif;
   max-width: 80%;
   margin: 0 auto;
@@ -52,7 +53,6 @@ body, h1, h2, p, button {
 
 .landing-info p {
   width: 100%; /* Set the initial width to 100% to avoid jumping effect */
-  font-family: cursive;
   white-space: nowrap; /* Prevent the text from wrapping to the next line */
   overflow: hidden; /* Hide the overflowing text */
   animation: typewriter 4s steps(400) forwards; /* Apply the typewriter animation */
@@ -66,7 +66,7 @@ body, h1, h2, p, button {
 
 .feature {
   flex-basis: 30%;
-  font-family: cursive;
+
   text-align: center;
 }
 
@@ -85,7 +85,7 @@ body, h1, h2, p, button {
 .feature p {
   font-size: 14px;
   font-style: initial;
-  font-family: cursive;
+  
   margin-bottom: 20px;
 }
 
@@ -162,7 +162,10 @@ body, h1, h2, p, button {
 
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
-  .landing-container {
+  .landing-page{
+    margin-top: 70px;
+  } .landing-container {
+   
       flex-direction: column; /* Change the flex direction to stack elements vertically */
   }
 
@@ -172,7 +175,7 @@ body, h1, h2, p, button {
   }
 
   .landing-info p {
-      font-size: 16px; /* Adjust the typewriter font size for smaller screens */
+      font-size: 11px; /* Adjust the typewriter font size for smaller screens */
   }
 
   .features {

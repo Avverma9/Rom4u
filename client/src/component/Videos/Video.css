@@ -1,278 +1,128 @@
-.bg-body-tertiary {
-  background: linear-gradient(to right, #b8b8b8, #fff);
-}
+/* Video.css */
 
 .video-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  background: linear-gradient(to right, #b8b8b8, #fff);
-}
-
-.video-card div {
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
-.video-cards {
-  transition: 0.5s ease-in-out;
-}
-
-.video-cards:hover {
-  box-shadow: 0 0 0 5px #bababa;
-}
-
-.video-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-/* Add this to your Video.css or create a new CSS file if needed */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-}
-
-/* Optional: Add a background color to the header if you want it to stand out */
-.header {
-  background-color: #fff; /* Replace with your desired background color */
-}
-/* styles.css */
-/* styles.css */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
   }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.active-users-icon {
-  animation: blink 1s infinite, pulse 3s infinite;
-  color: red;
-  font-size: 20px; /* Set the desired icon size here */
-}
-
-
-/* Optional: Add padding to the top of the content to prevent it from being covered by the fixed header */
-.landing-page {
-  padding-top: 70px; /* Adjust the value according to your header height */
-}
-
-.watch-more {
-  display: inline-block;
-  margin-left: 1200px;
-  background-color: #f2f2f2;
-  padding: 10px;
-  border-radius: 4px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.watch-more a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.watch-more a:hover {
-  color: #007bff;
-}
-
-.watch-more a svg {
-  margin-right: 5px;
-  font-size: 24px;
-}
-
-.video-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.video-device,
-.video-date {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-}
-
-.video-description {
-  margin-top: 10px;
-}
-
-.watchvideo-videos {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  font-weight: 701;
-  font-family: cursive;
-  transition: 0.5s;
-}
-
-.watchvideo-videos:hover {
-  letter-spacing: 0.20em;
-  background: rgb(255, 0, 183);
-  color: #fff;
-  width: auto;
-  box-shadow: 0 0 35px rgb(255, 0, 183);
-}
-
-.explore-button a {
-  text-decoration: none;
-}
-
-.playcircle {
-  font-size: 18px;
-}
-
-.playcircle:hover {
-  font-size: 25px;
-  color: #38ff01;
-}
-
-.all-item {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.home-nav,
-.videos-nav {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.home-logo {
-  font-size: 18px;
-  color: #00db4b;
-}
-
-.video-logo {
-  font-size: 20px;
-  color: red;
-}
-
-.link-logo {
-  color: #2570ff;
-  font-size: 18px;
-}
-
-.search-logo {
-  font-size: 18px;
-  position: absolute;
-  right: 7%;
-  top: 20px;
-  color: #838383;
-}
-
-.drop-menu {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.hr-belowvideos {
-  overflow: hidden;
-  color: black;
-  width: 85%;
-  height: 0;
-  display: flex;
-  margin-left: 8%;
-}
-/* loading screen */
-.loading-screen {
-  margin: auto;
-  margin-left: 450px;
-  padding: 8px;
-}
-.loading-screen p{
-  margin-left: 25px;
-  font-size: 25px;
-}
-/*  */
-.text-center {
-  background: linear-gradient(to right, #b8b8b8, #fff);
-  color: black;
-}
-
-@media (max-width: 468px) {
-  /* styles.css */
-/* styles.css */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.active-users-icon {
-  animation: blink 1s infinite, pulse 3s infinite;
-  color: red;
-  font-size: 30px; /* Set the desired icon size here */
-}
-
-
-  .video-card {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  
+  .video-cards {
+    background-color: #f8f8f8;
     padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
-  .video-cards:hover {
-    box-shadow: none;
-  }
-
-  .watch-more {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .video-title {
-    font-size: 16px;
-  }
-
+  
   .video-image img {
+    width: 100%;
+    height: auto;
     border-radius: 4px;
   }
-
+  
+  .video-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
   .video-device,
   .video-date {
-    font-size: 12px;
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
   }
-
+  
+  .video-description {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .explore-button {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
   .watchvideo-videos {
-    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
   }
 
-  .playcircle,
-  .playcircle:hover {
-    font-size: 14px;
+  .watchvideo-videos:hover {
+    letter-spacing: 0.20em;
+    background: rgb(255, 0, 183);
+    color: #fff;
+    width: auto;
+    box-shadow: 0 0 35px rgb(255, 0, 183);
   }
-}
+  
+  
+  .playcircle {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  
+
+  
+
+  /* Video.css */
+
+/* Styles for Mobile Devices with a maximum width of 468px */
+@media (max-width: 468px) {
+    .video-card {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .video-cards {
+      padding: 8px;
+    }
+  
+    .video-title {
+      font-size: 18px;
+    }
+  
+    .video-device,
+    .video-date {
+      font-size: 12px;
+    }
+  
+    .video-description {
+      font-size: 14px;
+    }
+  
+    .explore-button {
+      margin-top: 12px;
+    }
+  
+    .watchvideo-videos {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+.watchvideo-videos:hover {
+    letter-spacing: 0.20em;
+    background: rgb(255, 0, 183);
+    color: #fff;
+    width: auto;
+    box-shadow: 0 0 35px rgb(255, 0, 183);
+  }
+  
+    .playcircle {
+      font-size: 18px;
+      margin-right: 4px;
+    }
+  
+  
+  }
+  

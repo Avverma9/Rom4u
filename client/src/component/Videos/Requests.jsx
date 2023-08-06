@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
+import './Requests.css'
 const Requests=()=>{
     const [name,setName]=useState("")
     const [requests,setRequests]=useState("")

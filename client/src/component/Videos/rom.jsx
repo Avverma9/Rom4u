@@ -2,6 +2,7 @@ import React,{useEffect, useState} from "react";
 import {AiOutlineCloudDownload} from 'react-icons/ai';
 import axios from 'axios'
 import './rom.css'
+import './Loading.css'
 const Rom=()=>{
     const [data,setData]=useState([])
     const [isLoading,setIsLoading]=useState(true)

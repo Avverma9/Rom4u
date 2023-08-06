@@ -14,8 +14,7 @@ import { FaRegBell,FaUsers } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { FaPrayingHands } from "react-icons/fa";
 import {AiOutlineEye} from "react-icons/ai"
-import "../Videos/Video.css";
-
+import "./Header.css"
 function NavScrollExample() {
   const [activeUsers, setActiveUsers] = useState(0);
   const [eyeColor, setEyeColor] = useState('red');

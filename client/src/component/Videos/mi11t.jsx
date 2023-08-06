@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Video.css';
+import './mi11x.css';
+import './Loading.css'
 import { BsPlayCircle } from 'react-icons/bs';
 
 const VideoMI11T = () => {
@@ -47,11 +48,11 @@ const VideoMI11T = () => {
             </div>
 
             <div className="explore-button">
-              <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
-                <BsPlayCircle />
+            <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
+              <div className="watchvideo-videos">
+                <BsPlayCircle className="playcircle" />
                 Watch Video
-              </a>
-            </div>
+              </div> </a></div>
           </div>
         ))}
       </div>

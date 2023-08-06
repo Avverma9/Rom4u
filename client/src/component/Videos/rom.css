@@ -1,10 +1,11 @@
 /* Video.css */
 
 .all-item {
-    display: flex;
-    flex-wrap: wrap;
+  
+   
+    margin-top: 50px;
     justify-content: space-between;
-    margin: 20px;
+   
   }
   
   .name {
@@ -42,10 +43,12 @@
   /* For screens with a width less than 768px (e.g., mobile phones) */
   @media (max-width: 767px) {
     .all-item {
+      margin-top: 100px;
       justify-content: center;
     }
   
     .name {
+      margin-top: 15px;
       width: 100%;
       max-width: 400px;
     }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import { RiDeleteBinLine } from 'react-icons/ri';
 import axios from 'axios';
 import './Video.css';
+import './Loading.css'
 import { BsPlayCircle } from 'react-icons/bs';
 import { CiMobile1 } from 'react-icons/ci';
 import { BsCalendar2Date } from 'react-icons/bs';
