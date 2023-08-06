@@ -20,7 +20,7 @@ function NavScrollExample() {
 
   useEffect(() => {
     console.log("WebSocket connecting...");
-    const ws = new WebSocket("ws://websocket-8jxu.onrender.com"); // Update the URL if needed
+    const ws = new WebSocket("ws://https://youtube-bbrv.onrender.com"); // Update the URL if needed
   
     ws.onopen = () => {
       console.log("WebSocket connected!");
