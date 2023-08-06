@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -10,41 +9,12 @@ import { CiMobile1 } from "react-icons/ci";
 import { BsHouse, BsPlay } from "react-icons/bs";
 import { FiTool } from "react-icons/fi";
 import { BiLinkAlt, BiSearch } from "react-icons/bi";
-import { FaRegBell,FaUsers } from "react-icons/fa";
+import { FaRegBell } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { FaPrayingHands } from "react-icons/fa";
 import "../Videos/Video.css";
 
 function NavScrollExample() {
-  const [activeUsers, setActiveUsers] = useState(0);
-
-  useEffect(() => {
-    console.log("WebSocket connecting...");
-    const ws = new WebSocket("ws://websocket-8jxu.onrender.com"); // Update the URL if needed
-  
-    ws.onopen = () => {
-      console.log("WebSocket connected!");
-    };
-  
-    ws.onmessage = (event) => {
-      console.log("WebSocket message received:", event.data);
-      const data = JSON.parse(event.data);
-      setActiveUsers(data.activeUsers);
-    };
-  
-    ws.onclose = () => {
-      console.log("WebSocket connection closed.");
-    };
-  
-    ws.onerror = (error) => {
-      console.error("WebSocket error:", error);
-    };
-  
-    return () => {
-      ws.close();
-    };
-  }, []);
-  
   return (
      <Navbar
       expand="lg"
@@ -101,9 +71,7 @@ function NavScrollExample() {
               <FaPrayingHands className="link-logo" /> Request
             </Nav.Link>
             <NavDropdown.Divider />
-            <Nav.Link >
-              <FaUsers className="active-users-icon" /> {activeUsers}
-            </Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
