@@ -6,5 +6,5 @@ const youtubeSchema= new mongoose.Schema({
     description:String,
     date:String,
     videoUrl:String
-})
+},{timestamps:true})
 module.exports=mongoose.model("youtube",youtubeSchema)

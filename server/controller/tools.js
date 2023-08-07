@@ -8,7 +8,7 @@ const newTool = async(req,res)=>{
 }
 
 const getTool = async(req,res)=>{
-    const get= await tools.find()
+    const get= await tools.find().sort({createdAt :-1})
     res.json(get)
 }
 

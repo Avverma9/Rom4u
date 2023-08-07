@@ -7,5 +7,5 @@ mi11xSchema= new mongoose.Schema({
     device:String,
     description:String,
     videoUrl:String
-})
+},{timestamps:true})
 module.exports= mongoose.model("mi11x",mi11xSchema)

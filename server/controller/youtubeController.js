@@ -9,7 +9,7 @@ const createVideo = async(req,res)=>{
 }
 
 const getVideo = async(req,res)=>{
-    const videoData= await YoutubeModel.find()
+    const videoData= await YoutubeModel.find().sort({createdAt : -1})
     res.json(videoData)
 }
 

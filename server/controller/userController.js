@@ -113,4 +113,4 @@ const createSignup = async function (req, res) {
     }
   };
 
-  module.exports={createSignup,signIn,getAllUsers}
+  module.exports={createSignup,signIn,getAllUsers,getUserById}

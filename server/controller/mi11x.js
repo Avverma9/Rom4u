@@ -8,7 +8,7 @@ const createmi11x = async(req,res)=>{
 }
 
 const getMi11x = async(req,res)=>{
-    const videoData= await mi11x.find()
+    const videoData= await mi11x.find().sort({createdAt : -1})
     res.json(videoData)
 }
 

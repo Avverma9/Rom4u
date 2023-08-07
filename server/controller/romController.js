@@ -7,7 +7,7 @@ const createROm= async function(req,res){
 }
 
 const getROm=async(req,res)=>{
-    const getData= await romModel.find()
+    const getData= await romModel.find().sort({createdAt : -1})
     res.json(getData)
 }
 
