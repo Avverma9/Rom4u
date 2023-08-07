@@ -9,16 +9,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { CiMobile1 } from "react-icons/ci";
 import { BsHouse, BsPlay } from "react-icons/bs";
 import { FiTool } from "react-icons/fi";
-import { BiLinkAlt, BiSearch } from "react-icons/bi";
-import { FaRegBell,FaUsers } from "react-icons/fa";
+import { BiLinkAlt} from "react-icons/bi";
+import { FaRegBell } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { FaPrayingHands } from "react-icons/fa";
-import {AiOutlineEye} from "react-icons/ai"
+import {AiOutlineEye,AiOutlineLogin} from "react-icons/ai"
 import "./Header.css"
 function NavScrollExample() {
   const [activeUsers, setActiveUsers] = useState(0);
   const [eyeColor, setEyeColor] = useState('red');
-  const [showMessage, setShowMessage] = useState(false);
   useEffect(() => {
  
     const ws = new WebSocket("wss://websocket-8jxu.onrender.com");
@@ -52,13 +51,7 @@ function NavScrollExample() {
     }
     return color;
   };
-  const handleHover = () => {
-    setShowMessage(true);
-  };
 
-  const handleHoverOut = () => {
-    setShowMessage(false);
-  };
   return (
      <Navbar
       expand="lg"
@@ -115,13 +108,12 @@ function NavScrollExample() {
               <FaPrayingHands className="link-logo" /> Request
             </Nav.Link>
             <NavDropdown.Divider />
-            <Nav.Link
-      className="active-users-link"
-      onMouseEnter={handleHover}
-      onMouseLeave={handleHoverOut}
-    >
+          
+    <Nav.Link href="/login" >
+              <AiOutlineLogin className="link-logo" /> Login/register
+            </Nav.Link>
+            <Nav.Link>
       <AiOutlineEye className="active-users-icon" style={{ color: eyeColor }} /> {activeUsers}
-      {showMessage && <div className="hover-message">Active users</div>}
     </Nav.Link>
           </Nav>
         </Navbar.Collapse>

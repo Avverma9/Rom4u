@@ -1,0 +1,36 @@
+/* Styling for Google component */
+.google-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .google-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4285f4; /* Google blue color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1a73e8; /* Darker shade of blue on hover */
+  }
+  
+  /* Optional: Adjust the button style for mobile devices */
+  @media (max-width: 768px) {
+    button {
+      font-size: 14px;
+    }
+  }
+  

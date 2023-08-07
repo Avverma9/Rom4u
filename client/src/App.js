@@ -3,16 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./component/Footer/Footer";
 import NavScrollExample from "./component/Header/Header";
 import LandingPage from "./component/LandingPage/Landingpage";
-import VideoPage from "./component/Videos/Video";
-import VideoMI11T from "./component/Videos/mi11t";
-import VideoMI11x from "./component/Videos/mi11x";
-import Tool from "./component/Videos/tools";
+import VideoPage from "./component/Youtube/Video";
+import VideoMI11T from "./component/Youtube/mi11t";
+import VideoMI11x from "./component/Youtube/mi11x";
+import Tool from "./component/Youtube/tools";
 import Sidebar from "./component/Admin/Sidebar";
-import Requests from "./component/Videos/Requests";
-import Rom from "./component/Videos/rom";
+import Requests from "./component/Youtube/Requests";
+import Rom from "./component/Youtube/rom";
 
 import Profile from "./component/Loginpage/Profile"; // Add the import statement for Profile
 import Login from "./component/Loginpage/Loginpage";
+import Signup from "./component/Loginpage/Signup";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         />
         <Route path="/roms" element={<Rom />} />
         <Route path="/av" element={<Sidebar />} />
+        <Route path="/register" element={<Signup/>}/>
       </Routes>
       <Footer />
     </Router>
