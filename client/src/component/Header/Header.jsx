@@ -78,9 +78,9 @@ function NavScrollExample() {
             </Nav.Link>
             <Nav.Link href="/videos" className="videos-nav">
               <BsPlay className="video-logo" />
-              Recent videos
+              Recents
             </Nav.Link>
-            <NavDropdown title="Devices" id="navbarScrollingDropdown">
+            <NavDropdown title="Videos" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/mi11x" className="drop-menu">
                 <CiMobile1 />
                 Mi 11X
