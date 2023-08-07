@@ -1,18 +1,15 @@
-import React from "react";
+import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleLogout = () => {
-    // Clear user information from local storage
     localStorage.removeItem("isSignedIn");
     localStorage.removeItem("loggedUser");
-    // Redirect to the login page
     navigate("/");
   };
-
-  // Fetch the user profile data from local storage
   const userProfile = localStorage.getItem("isSignedIn")
     ? JSON.parse(localStorage.getItem("loggedUser"))
     : null;

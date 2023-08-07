@@ -18,7 +18,7 @@ useEffect(()=>{
  
 },[])
 if (isLoading) {
-    return <div className='loading-screen'><img src="https://media3.giphy.com/media/fUSQGDRvuBlQXcX0TA/giphy.gif" alt="Loading" />;
+    return <div className='loading-screen'><img src="https://31.media.tumblr.com/a8c4b4c688fb6a4350a81e57fabadee2/tumblr_n24umuPm3E1st3reyo1_500.gif" alt="Loading" />;
     <p>Tumhare ROM ka link raste me hai friend</p></div>
   }
   return(

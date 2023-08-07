@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {useNavigate} from "react-router-dom"
-import GoogleLogin from './Google';
+import GoogleLogin from '../Authentication/Google';
 import axios from 'axios'
 import "./Login.css"
 
