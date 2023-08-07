@@ -2,6 +2,7 @@
 
 /* Styles for the footer */
 footer {
+  margin-top: 100px;
     background-color: #f8f9fa; /* Set the background color for the footer */
     color: #333; /* Set the text color for the footer */
     padding: 20px 0; /* Add padding at the top and bottom of the footer */

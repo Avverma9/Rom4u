@@ -111,7 +111,8 @@ function NavScrollExample() {
               <AiOutlineLogin className="link-logo" /> Login/register
             </Nav.Link>
             <Nav.Link>
-      <AiOutlineEye className="active-users-icon" style={{ color: eyeColor }} /> {activeUsers}
+              
+    <AiOutlineEye className="active-users-icon" style={{ color: eyeColor }} /> {activeUsers} Active now
     </Nav.Link>
           </Nav>
         </Navbar.Collapse>
