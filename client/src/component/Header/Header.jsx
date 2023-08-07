@@ -96,9 +96,7 @@ function NavScrollExample() {
             <Nav.Link href="/roms">
               <BiLinkAlt className="link-logo" /> Rom Link
             </Nav.Link>
-            <Nav.Link href="#" disabled>
-              <FaRegBell className="link-logo" /> Notifications
-            </Nav.Link>
+        
             <Nav.Link href="#" disabled>
               <FaHandHoldingHeart className="link-logo" /> Support us
             </Nav.Link>
@@ -109,6 +107,9 @@ function NavScrollExample() {
           
     <Nav.Link href="/login" >
               <AiOutlineLogin className="link-logo" /> Login/register
+            </Nav.Link>
+            <Nav.Link href="/notification" disabled>
+              <FaRegBell className="link-logo" />
             </Nav.Link>
             <Nav.Link>
               
