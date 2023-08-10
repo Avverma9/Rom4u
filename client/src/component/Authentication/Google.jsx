@@ -29,9 +29,10 @@ const Google = () => {
 
   return (
     <div className="google-container" onClick={handleGoogleLogin}>
-      <p className="google-text">Continue With </p>
+<p className="google-text" style={{ fontSize: '15px', marginTop: '-2px' }}>Continue With </p>
+
       <img
-        src="https://freepngimg.com/thumb/google/153884-logo-google-png-download-free.png"
+        src="https://img.icons8.com/external-those-icons-flat-those-icons/24/external-Google-logos-and-brands-those-icons-flat-those-icons.png"
         alt="Google Logo"
         className="google-logo"
       />

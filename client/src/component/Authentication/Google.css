@@ -1,55 +1,26 @@
+.google-text {
+ 
+  margin-right: 10px;
+  
+  color: #000000;
+}
+
 .google-container {
+  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
   cursor: pointer;
-  padding: 1px; 
-  margin-bottom: -100px;
-  border-radius: 24px;
-  background-color: #4285f4;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .google-container:hover {
-  background-color: #3c78e7;
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
 }
 
-.google-container img {
- 
-  width: 100px;
-  height: 40px;
-}
-
-.google-text {
-  margin-right: 8px;
-}
-
-.google-logo {
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-}
-
-/* Additional CSS styles */
-
-.google-container:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #3c78e7;
-}
-
-.google-container:active {
-  transform: scale(0.95);
-}
-
-.google-container p {
-  margin: 0;
-}
-
-.google-container:hover .google-logo {
-  transform: rotate(360deg);
-}
 
